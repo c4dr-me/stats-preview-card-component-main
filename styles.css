@@ -98,6 +98,7 @@ a {
     align-items: center;
     gap: 1rem;
     min-height: 100vh;
+    overflow: hidden;
   }
   .card_preview {
     display: flex;
@@ -107,7 +108,11 @@ a {
     max-width: 68.875rem;
     max-height: 27.8125rem;
     border-radius: 1rem;
-    overflow: hidden;
+  }
+  .card_preview .right {
+    -o-object-fit: fill;
+       object-fit: fill;
+    width: 50%;
   }
   .card_preview .left, .card_preview right {
     width: 50%;
