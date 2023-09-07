@@ -1,4 +1,4 @@
-
+// Google font
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
 // variables.scss
 
@@ -9,10 +9,10 @@ $main-heading: hsl(0, 0%, 100%);
 $main-para : hsla(0, 0%, 100%, 0.75);
 $stat-headings : hsla(0, 0%, 100%, 0.6);
 $blend : hsla(277, 62%, 64%, 0.9);
-
+//font-name
 $ff-primary: 'Inter', sans-serif;
 $ff-secondary: 'Lexend Deca', sans-serif;
-
+//font-weight
 $fw-regular: 400;
 $fw-bold: 700;
 
@@ -47,7 +47,7 @@ body{
     font-family: $ff-primary;
     font-size: .9375rem;
 }
-
+//Main Card
 .card_preview{
     background-color: $card-bg;
     border-radius: 1rem;
@@ -58,7 +58,7 @@ body{
     .right, .left{
         height: 50%;
     }
-
+    //image section
     .right{
         background-color: $blend;
         img{
@@ -72,7 +72,7 @@ body{
 
     .left{
         padding: 1.5rem;
-   
+    //bold text
     h2{
         color: $main-heading;
         line-height: 1.2;
@@ -81,6 +81,7 @@ body{
             color: $accent;
         }
     }
+    //paragraph following bold text
     p{
         padding-top: 1.2rem;
         font-size: 0.8em;
@@ -88,6 +89,7 @@ body{
         font-weight: $fw-regular;
         opacity: 0.8;
     }
+    //stats item
     ul{
         list-style-type: none;
         padding-top: 1.2rem;
@@ -110,7 +112,7 @@ body{
 }
    
 
-
+//footter
 footer {
     font-size: inherit;
     text-align: center;
@@ -119,6 +121,7 @@ footer {
 a {
     color:$accent;
 }
+//media queries for desktop
 
 @media (min-width: 68.75rem){
     body{
