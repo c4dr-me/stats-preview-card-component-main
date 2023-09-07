@@ -7,96 +7,142 @@
   box-sizing: border-box;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  background-color: hsl(233, 47%, 7%);
+  font-family: "Inter", sans-serif;
+  font-size: 0.9375rem;
+}
+
+.card_preview {
+  background-color: hsl(244, 38%, 16%);
+  border-radius: 1rem;
+  text-align: center;
+  margin: 2rem;
+  overflow: hidden;
+}
+.card_preview .right, .card_preview .left {
+  height: 50%;
+}
+.card_preview .right {
+  background-color: hsla(277, 62%, 64%, 0.9);
+}
+.card_preview .right img {
+  mix-blend-mode: multiply;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+.left {
+  padding: 1.5rem;
+}
+.left h2 {
+  color: hsl(0, 0%, 100%);
+  line-height: 1.2;
+}
+.left h2 span {
+  color: hsl(277, 64%, 61%);
+}
+.left p {
+  padding-top: 1.2rem;
+  font-size: 0.8em;
+  color: hsla(0, 0%, 100%, 0.75);
+  font-weight: 400;
+  opacity: 0.8;
+}
+.left ul {
+  list-style-type: none;
+  padding-top: 1.2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  min-height: 100vh;
-  background-color: hsl(233, 47%, 7%);
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-size: 0.9375rem;
-  color: hsla(0, 0%, 100%, 0.75);
 }
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-.card_preview {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background-color: hsl(244, 38%, 16%);
-  max-width: 69.375rem;
-  border-radius: 1rem;
-  overflow: hidden;
-}
-.card_preview .left, .card_preview .right {
-  flex: 1;
-}
-.card_preview .left {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: left;
-  gap: 3.3rem;
-  padding-left: 4.375rem;
-}
-.card_preview .left header {
+.left ul strong {
   font-weight: 700;
   color: hsl(0, 0%, 100%);
-  padding-right: 5.85rem;
+  font-size: 1.4rem;
 }
-.card_preview .left header h2 {
-  font-size: 2.2em;
-}
-.card_preview .left header h2 span {
-  color: hsl(277, 64%, 61%);
-}
-.card_preview .left .sub-text p {
-  font-family: "Lexend Deca", sans-serif;
-  font-weight: 400;
-  color: hsla(0, 0%, 100%, 0.75);
-  padding-right: 8rem;
-}
-.card_preview .left .impressions {
-  display: flex;
-  gap: 5rem;
-  font-family: "Inter", sans-serif;
+.left ul h3 {
   text-transform: uppercase;
-  padding-right: 10rem;
-}
-.card_preview .left .impressions h3 {
-  color: hsl(0, 0%, 100%);
-  font-weight: 700;
-}
-.card_preview .left .impressions p {
+  font-weight: 400;
+  font-family: "Lexend Deca", sans-serif;
   color: hsla(0, 0%, 100%, 0.6);
-  font-size: 0.8em;
-  font-weight: 700;
-}
-.card_preview .right {
-  background-color: hsla(277, 64%, 61%, 0.9);
-}
-.card_preview .right img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  height: 100%;
-  mix-blend-mode: multiply;
+  font-size: 0.7em;
 }
 
 footer {
-  font-size: 11px;
+  font-size: inherit;
   text-align: center;
+  color: hsl(0, 0%, 100%);
 }
 
 a {
   color: hsl(277, 64%, 61%);
+}
+
+@media (min-width: 68.75rem) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    min-height: 100vh;
+  }
+  .card_preview {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    max-width: 68.875rem;
+    max-height: 27.8125rem;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  .card_preview .left, .card_preview right {
+    width: 50%;
+  }
+  .card_preview .left {
+    padding: 5rem;
+  }
+  .card_preview .left .heading {
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+  }
+  .card_preview .left .heading h2 {
+    font-size: 2.4em;
+  }
+  .card_preview .left .heading h2 span {
+    color: hsl(277, 64%, 61%);
+  }
+  .card_preview .left .sub-text p {
+    padding-top: 1.3rem;
+    line-height: 1.5;
+    opacity: 0.8;
+    font-size: 1em;
+  }
+  .card_preview .left .impressions {
+    font-family: "Inter", sans-serif;
+    text-transform: uppercase;
+    padding-top: 4.9rem;
+  }
+  .card_preview .left .impressions ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .card_preview .left .impressions ul li {
+    font-size: 0.8em;
+  }
 }/*# sourceMappingURL=styles.css.map */

@@ -18,37 +18,46 @@
   <body>
     <main>
       <article class="card_preview">
-        <section class="left">
-          <header>
+        <div class="right">
+          <picture>
+            <source
+              media="(min-width: 768px)"
+              srcset="images/image-header-desktop.jpg"
+            />
+            <img
+              src="images/image-header-mobile.jpg"
+              alt="Bunch of people working and socializing in a meeting"
+            />
+          </picture>
+        </div>
+        <div class="left">
+          <div class="heading">
             <h2>Get <span>insights</span> that help your business grow.</h2>
-          </header>
-          <section class="sub-text">
+          </div>
+
+          <div class="sub-text">
             <p>
               Discover the benefits of data analytics and make better decisions
               regarding revenue, customer experience, and overall efficiency.
             </p>
-          </section>
-          <section class="impressions">
-            <div>
-              <h3>10k+</h3>
-              <p>companies</p>
-            </div>
-            <div>
-              <h3>314</h3>
-              <p>templates</p>
-            </div>
-            <div>
-              <h3>12m+</h3>
-              <p>queries</p>
-            </div>
-          </section>
-        </section>
-        <section class="right">
-          <img
-            src="images/image-header-desktop.jpg"
-            alt="Bunch of people working and socialising in a meeting"
-          />
-        </section>
+          </div>
+          <div class="impressions">
+            <ul>
+              <li>
+                <strong>10k+</strong>
+                <h3>companies</h3>
+              </li>
+              <li>
+                <strong>314</strong>
+                <h3>templates</h3>
+              </li>
+              <li>
+                <strong>12m+</strong>
+                <h3>Queries</h3>
+              </li>
+            </ul>
+          </div>
+        </div>
       </article>
     </main>
 
