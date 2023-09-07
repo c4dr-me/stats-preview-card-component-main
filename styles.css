@@ -82,7 +82,7 @@ img {
   font-weight: 700;
 }
 .card_preview .right {
-  background-color: hsl(277, 64%, 61%);
+  background-color: hsla(277, 64%, 61%, 0.9);
 }
 .card_preview .right img {
   -o-object-fit: cover;
