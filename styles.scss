@@ -25,7 +25,7 @@ $fw-bold: 700;
 }
 @mixin flexcenter_card{
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
 }
 
 *,
@@ -129,7 +129,8 @@ a {
     overflow: hidden;
     }
     .card_preview{
-    @include flexcenter(row-reverse);
+    @include flexcenter_card;
+    text-align: left;
     max-width: 68.875rem;
     max-height: 27.8125rem ;
     border-radius: 1rem;
@@ -175,8 +176,13 @@ a {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-        li {
-            font-size: 0.8em;
+            list-style: none;
+            li{
+                .h3 {
+                font-size: 1.2em;
+                font-family: $ff-primary;
+            }
+        
         }
     }
     }

@@ -103,8 +103,7 @@ a {
   .card_preview {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
+    text-align: left;
     max-width: 68.875rem;
     max-height: 27.8125rem;
     border-radius: 1rem;
@@ -146,8 +145,10 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    list-style: none;
   }
-  .card_preview .left .impressions ul li {
-    font-size: 0.8em;
+  .card_preview .left .impressions ul li .h3 {
+    font-size: 1.2em;
+    font-family: "Inter", sans-serif;
   }
 }/*# sourceMappingURL=styles.css.map */
