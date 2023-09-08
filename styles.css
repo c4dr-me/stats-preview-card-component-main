@@ -138,6 +138,7 @@ a {
     display: block;
   }
   .card_preview ul li span {
+    font-size: 0.8em;
     font-family: "Lexend Deca", sans-serif;
   }
 }/*# sourceMappingURL=styles.css.map */
