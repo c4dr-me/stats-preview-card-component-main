@@ -9,9 +9,11 @@ $main-heading: hsl(0, 0%, 100%);
 $main-para : hsla(0, 0%, 100%, 0.75);
 $stat-headings : hsla(0, 0%, 100%, 0.6);
 $blend : hsla(277, 62%, 64%, 0.9);
+
 //font-name
 $ff-primary: 'Inter', sans-serif;
 $ff-secondary: 'Lexend Deca', sans-serif;
+
 //font-weight
 $fw-regular: 400;
 $fw-bold: 700;
@@ -47,6 +49,7 @@ body{
     font-family: $ff-primary;
     font-size: .9375rem;
 }
+
 //Main Card
 .card_preview{
     background-color: $card-bg;
@@ -54,10 +57,7 @@ body{
     text-align: center;
     margin: 2rem ;
     overflow: hidden;
-    
-    .right, .left{
-        height: 50%;
-    }
+    min-height: 70vh;
     //image section
     .right{
         background-color: $blend;
@@ -71,7 +71,8 @@ body{
 }
 
     .left{
-        padding: 1.5rem;
+        padding: 4rem;
+
     //bold text
     h2{
         color: $main-heading;
@@ -81,14 +82,14 @@ body{
             color: $accent;
         }
     }
+
     //paragraph following bold text
     p{
         padding-top: 1.2rem;
-        font-size: 0.8em;
         color : $main-para;
         font-weight: $fw-regular;
-        opacity: 0.8;
     }
+
     //stats item
     ul{
         list-style-type: none;
@@ -100,10 +101,10 @@ body{
             font-weight: $fw-bold;
             color: $main-heading;
             font-size: 1.4rem;
+            display: block;
         }
-        h3{
+        span{
             text-transform: uppercase;
-            font-weight: $fw-regular;
             font-family: $ff-secondary;
             color: $stat-headings;
             font-size: 0.7em;
@@ -126,33 +127,31 @@ a {
 @media (min-width: 68.75rem){
     body{
     @include flexcenter(column);
-    gap: 1rem;
     min-height: 100vh;
-    overflow: hidden;
     }
     .card_preview{
+
     @include flexcenter_card;
     text-align: left;
     max-width: 68.875rem;
-    max-height: 27.8125rem ;
+    min-height: 28rem;
     border-radius: 1rem;
     
-    .right{
-        object-fit: fill;
-        width: 50%;
-    }
-
     .left, right{
         width: 50%;
     }
     
+    .right img
+    {
+    object-fit:fill;
+    }
+
     .left{
         padding: 5rem;
-        
-        .heading{
-            font-weight: $fw-bold;
-            color : $main-heading;
+            
             h2{
+                font-weight: $fw-bold;
+            color : $main-heading;
                 font-size: 2.4em;
             
             span{
@@ -169,25 +168,25 @@ a {
                 font-size: 1em;
             }
     }
-    .impressions{
-        font-family: $ff-primary;
-        text-transform: uppercase;
-        padding-top: 4.9rem;
         ul{
+            text-transform: uppercase;
+            padding-top: 4.9rem;
             list-style-type: none;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             list-style: none;
             li{
-                .h3 {
-                font-size: 1.2em;
-                font-family: $ff-primary;
+                strong{
+                    display: block;
+                }
+                span {
+                font-family: $ff-secondary;
             }
         
         }
     }
     }
         }
-    }
-}
+    
+
