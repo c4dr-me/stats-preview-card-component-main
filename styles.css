@@ -13,18 +13,24 @@ img {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-family: "Inter", sans-serif;
   font-weight: 400;
   background-color: hsl(233, 47%, 7%);
   font-family: "Inter", sans-serif;
   font-size: 0.9375rem;
+  line-height: 1.6;
 }
 
 .card_preview {
   background-color: hsl(244, 38%, 16%);
   border-radius: 1rem;
   text-align: center;
-  margin: 2rem;
+  margin: 1rem;
+  max-width: 34rem;
   overflow: hidden;
 }
 .card_preview .right {
@@ -32,14 +38,17 @@ body {
 }
 .card_preview .right img {
   mix-blend-mode: multiply;
-  -o-object-fit: contain;
-     object-fit: contain;
-  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 18rem;
+  -o-object-position: top;
+     object-position: top;
   width: 100%;
+  height: 100%;
 }
 
 .left {
-  padding: 4rem;
+  padding: 2rem;
 }
 .left h2 {
   color: hsl(0, 0%, 100%);
@@ -49,13 +58,13 @@ body {
   color: hsl(277, 64%, 61%);
 }
 .left p {
-  padding-top: 1.2rem;
+  margin-top: 1.2rem;
   color: hsla(0, 0%, 100%, 0.75);
   font-weight: 400;
 }
 .left ul {
   list-style-type: none;
-  padding-top: 1.2rem;
+  margin-top: 1.2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -78,13 +87,14 @@ footer {
   font-size: inherit;
   text-align: center;
   color: hsl(0, 0%, 100%);
+  padding: 1rem;
 }
 
 a {
   color: hsl(277, 64%, 61%);
 }
 
-@media (min-width: 68.75rem) {
+@media (min-width: 55rem) {
   body {
     display: flex;
     flex-direction: column;
@@ -97,18 +107,18 @@ a {
     flex-direction: row-reverse;
     text-align: left;
     max-width: 68.875rem;
-    min-height: 28rem;
     border-radius: 1rem;
   }
   .card_preview .left, .card_preview right {
     width: 50%;
   }
   .card_preview .right img {
-    -o-object-fit: fill;
-       object-fit: fill;
+    max-height: none;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .card_preview .left {
-    padding: 5rem;
+    padding: 4rem;
   }
   .card_preview .left h2 {
     font-weight: 700;
@@ -119,14 +129,14 @@ a {
     color: hsl(277, 64%, 61%);
   }
   .card_preview .sub-text p {
-    padding-top: 1.3rem;
+    margin-top: 1.3rem;
     line-height: 1.5;
     opacity: 0.8;
-    font-size: 1em;
+    font-size: 1rem;
   }
   .card_preview ul {
     text-transform: uppercase;
-    padding-top: 4.9rem;
+    margin-top: 4.9rem;
     list-style-type: none;
     display: flex;
     flex-direction: row;
@@ -137,7 +147,7 @@ a {
     display: block;
   }
   .card_preview ul li span {
-    font-size: 0.8em;
+    font-size: 0.8rem;
     font-family: "Lexend Deca", sans-serif;
   }
 }/*# sourceMappingURL=styles.css.map */

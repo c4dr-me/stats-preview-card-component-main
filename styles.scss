@@ -43,11 +43,13 @@
         max-width: 100%;
     }
     body{
+        @include flexcenter(column);
         font-family: $ff-primary;
         font-weight: $fw-regular;
         background-color: $main-bg;
         font-family: $ff-primary;
         font-size: .9375rem;
+        line-height: 1.6;
     }
 
     //Main Card
@@ -55,22 +57,26 @@
         background-color: $card-bg;
         border-radius: 1rem;
         text-align: center;
-        margin: 2rem ;
+        margin: 1rem ;
+        max-width: 34rem;
         overflow: hidden;
         //image section
+
         .right{
             background-color: $blend;
             img{
                 mix-blend-mode: multiply;
-                object-fit: contain;
+                object-fit: cover;
+                max-height: 18rem;
+                object-position: top;
+                width: 100%;
                 height: 100%;
-                width:100%;
             }
         }
     }
 
         .left{
-            padding: 4rem;
+            padding: 2rem;
 
         //bold text
         h2{
@@ -84,7 +90,7 @@
 
         //paragraph following bold text
         p{
-            padding-top: 1.2rem;
+            margin-top: 1.2rem;
             color : $main-para;
             font-weight: $fw-regular;
         }
@@ -92,7 +98,7 @@
         //stats item
         ul{
             list-style-type: none;
-            padding-top: 1.2rem;
+            margin-top: 1.2rem;
             @include flexcenter(column);
             gap: 1rem;
 
@@ -116,13 +122,14 @@
         font-size: inherit;
         text-align: center;
         color: $main-heading;
+        padding: 1rem;
     }
     a {
         color:$accent;
     }
     //media queries for desktop
 
-    @media (min-width: 68.75rem){
+    @media (min-width: 55rem){
         body{
         @include flexcenter(column);
         min-height: 100vh;
@@ -132,7 +139,6 @@
         @include flexcenter_card;
         text-align: left;
         max-width: 68.875rem;
-        min-height: 28rem;
         border-radius: 1rem;
         
         .left, right{
@@ -141,11 +147,12 @@
         
         .right img
         {
-        object-fit:fill;
+        max-height: none;
+        object-fit:cover;
         }
 
         .left{
-            padding: 5rem;
+            padding: 4rem;
                 
                 h2{
                     font-weight: $fw-bold;
@@ -160,15 +167,15 @@
 
             .sub-text{
                 p{
-                    padding-top: 1.3rem;
+                    margin-top: 1.3rem;
                     line-height: 1.5;
                     opacity: 0.8;
-                    font-size: 1em;
+                    font-size: 1rem;
                 }
         }
             ul{
                 text-transform: uppercase;
-                padding-top: 4.9rem;
+                margin-top: 4.9rem;
                 list-style-type: none;
                 display: flex;
                 flex-direction: row;
@@ -179,7 +186,7 @@
                         display: block;
                     }
                     span {
-                    font-size: 0.8em;
+                    font-size: 0.8rem;
                     font-family: $ff-secondary;
                 }
             
