@@ -140,7 +140,8 @@ a {
     list-style-type: none;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 3rem;
     list-style: none;
   }
   .card_preview ul li strong {
