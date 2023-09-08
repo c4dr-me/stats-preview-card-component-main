@@ -26,7 +26,6 @@ body {
   text-align: center;
   margin: 2rem;
   overflow: hidden;
-  min-height: 70vh;
 }
 .card_preview .right {
   background-color: hsla(277, 62%, 64%, 0.9);
